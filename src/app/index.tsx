@@ -18,7 +18,13 @@ const App: React.FC = () => {
         spacing={6}
       >
         <Stack direction="row" spacing={0}>
-          <Avatar showBorder alt="jeremy" borderWidth={2} src={`/assets/${props.avatar}`} />
+          <Avatar
+            showBorder
+            alt={props.name}
+            borderColor={props.avatarColor}
+            borderWidth={2}
+            src={`/assets/${props.avatar}`}
+          />
           <Stack color={props.darkFont ? "primary.500" : "primary.700"} paddingX={4} spacing={0}>
             <Text fontSize="13px" fontWeight="600" paddingTop={1}>
               {props.name}
@@ -41,27 +47,36 @@ const App: React.FC = () => {
   };
 
   return (
-    <Stack
-      backgroundColor="secondary.100"
-      color="whiteAlpha.900"
-      height={[null, "100vh"]}
-      justifyContent="center"
-      paddingX={[8, 0]}
-      paddingY={[12, null]}
-      width="100%"
-    >
-      <Stack alignSelf="center" borderRadius={12} width={[null, "container.lg"]}>
-        <Grid gap={4} templateColumns={["repeat(1, 1fr)", "repeat(4, 1fr)"]}>
-          {data.map((item) => {
-            return (
-              <GridItem key={item.name} colSpan={[1, item.colSpan]} rowSpan={[1, item.rowSpan]}>
-                <Profile {...item} />
-              </GridItem>
-            );
-          })}
-        </Grid>
+    <>
+      <h1 style={{display: "none"}}>Frontend Mentor</h1>
+      <Stack
+        backgroundColor="secondary.100"
+        color="whiteAlpha.900"
+        height={[null, "100vh"]}
+        justifyContent="center"
+        paddingX={[8, 0]}
+        paddingY={[12, null]}
+        width="100%"
+      >
+        <Stack alignSelf="center" borderRadius={12} width={[null, "container.lg"]}>
+          <Grid gap={4} templateColumns={["repeat(1, 1fr)", "repeat(4, 1fr)"]}>
+            {data.map((item) => {
+              return (
+                <GridItem
+                  key={item.name}
+                  gridColumnEnd={["", item.gridColumnEnd ? item.gridColumnEnd : ""]}
+                  gridColumnStart={["", item.gridColumnStart ? item.gridColumnStart : ""]}
+                  gridRowEnd={["", item.gridRowEnd ? item.gridRowEnd : ""]}
+                  gridRowStart={["", item.gridRowStart ? item.gridRowStart : ""]}
+                >
+                  <Profile {...item} />
+                </GridItem>
+              );
+            })}
+          </Grid>
+        </Stack>
       </Stack>
-    </Stack>
+    </>
   );
 };
 
