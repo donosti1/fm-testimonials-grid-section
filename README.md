@@ -30,13 +30,11 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - Solution URL: [https://github.com/donosti1/fm-testimonials-grid-section](https://github.com/donosti1/fm-testimonials-grid-section)
-
+- Live Site URL: [https://fm-testimonials-grid-section-git-main-donosti1.vercel.app/](https://fm-testimonials-grid-section-git-main-donosti1.vercel.app/)
 ## My process
 
 ### Built with
-- Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Chakra UI](https://chakra-ui.com/) - React Component library
 
@@ -45,5 +43,3 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 - Frontend Mentor - [@donosti1](https://www.frontendmentor.io/profile/donosti1)
 - Github - [@donosti1](https://github.com/donosti1)
-
-
