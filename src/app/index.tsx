@@ -20,9 +20,9 @@ const App: React.FC = () => {
         <Stack direction="row" spacing={0}>
           <Avatar
             showBorder
-            alt={props.name}
             borderColor={props.avatarColor}
             borderWidth={2}
+            name={props.name}
             src={`/assets/${props.avatar}`}
           />
           <Stack color={props.darkFont ? "primary.500" : "primary.700"} paddingX={4} spacing={0}>
